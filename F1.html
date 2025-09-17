@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RK Consolidated | AI Cybersecurity Solutions</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
     <style>
-        /* Global Styles */
         :root {
             --primary: #1a5fb4;
             --secondary: #1c71d8;
             --dark: #1e1e1e;
             --light: #f6f5f4;
             --accent: #26a269;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
         }
         
         * {
@@ -25,22 +26,16 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
-            padding: 20px;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            padding: 20px;
-            position: relative;
         }
         
         section {
-            padding: 3rem 0;
+            padding: 5rem 0;
         }
         
         h1, h2, h3, h4 {
@@ -55,7 +50,7 @@
         .btn {
             display: inline-block;
             padding: 0.8rem 1.8rem;
-            background-color: var(--primary);
+            background: var(--gradient);
             color: white;
             text-decoration: none;
             border-radius: 4px;
@@ -66,17 +61,15 @@
         }
         
         .btn:hover {
-            background-color: var(--secondary);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
         
         /* Header Styles */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
+            position: fixed;
             width: 100%;
             z-index: 1000;
         }
@@ -92,6 +85,9 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .logo span {
@@ -120,16 +116,14 @@
         
         /* Hero Section */
         .hero {
-            padding-top: 5rem;
-            padding-bottom: 3rem;
+            padding-top: 10rem;
+            padding-bottom: 5rem;
             background: linear-gradient(135deg, #f6f5f4 0%, #e3e7ed 100%);
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
         }
         
@@ -143,15 +137,12 @@
         /* About Section */
         .about {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
         
         .about-content {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 4rem;
         }
         
         .about-text {
@@ -160,38 +151,36 @@
         
         .about-image {
             flex: 1;
-            background: linear-gradient(45deg, #1a5fb4, #26a269);
-            height: 300px;
+            background: var(--gradient);
+            height: 400px;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-style: italic;
+            padding: 2rem;
             text-align: center;
-            padding: 20px;
         }
         
         /* Services Section */
         .services {
             background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
         .service-card {
             background-color: white;
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
+            text-align: center;
         }
         
         .service-card:hover {
@@ -200,16 +189,12 @@
         
         .service-icon {
             font-size: 2.5rem;
-            color: var(--primary);
             margin-bottom: 1rem;
         }
         
         /* Contact Section */
         .contact {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
         }
         
         .contact-form {
@@ -244,9 +229,8 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-align: center;
-            border-radius: 10px;
         }
         
         .footer-content {
@@ -271,27 +255,27 @@
             color: var(--accent);
         }
         
-        /* Viewing Instructions */
-        .instructions {
+        /* Deployment Help Section */
+        .deployment-help {
             background-color: #f0f7ff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 30px;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
             border-left: 4px solid var(--primary);
         }
         
-        .instructions h3 {
+        .deployment-help h3 {
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
         }
         
-        .instructions ol {
-            padding-left: 20px;
-            margin-bottom: 15px;
+        .deployment-help ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
         }
         
-        .instructions li {
-            margin-bottom: 10px;
+        .deployment-help li {
+            margin-bottom: 0.5rem;
         }
         
         /* Responsive Design */
@@ -301,25 +285,21 @@
             }
             
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .nav-links {
                 display: none;
             }
-            
-            .instructions {
-                padding: 15px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header>
+    <!-- Header -->
+    <header>
+        <div class="container">
             <nav>
-                <div class="logo">RK <span>Consolidated</span></div>
+                <div class="logo">🛡️ RK <span>Consolidated</span></div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -327,17 +307,21 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </header>
+        </div>
+    </header>
 
-        <!-- Hero Section -->
-        <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
             <h1>AI-Powered Cybersecurity Solutions</h1>
             <p>RK Consolidated is a startup dedicated to revolutionizing cybersecurity through artificial intelligence. We protect your digital assets with cutting-edge technology.</p>
             <a href="#contact" class="btn">Get in Touch</a>
-        </section>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
             <h2>About RK Consolidated</h2>
             <div class="about-content">
                 <div class="about-text">
@@ -346,13 +330,15 @@
                     <p>Our team consists of passionate experts in AI and cybersecurity who are committed to delivering exceptional protection for your digital assets.</p>
                 </div>
                 <div class="about-image">
-                    Company Image/Logo Placeholder
+                    AI Cybersecurity Innovation
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services">
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
@@ -376,34 +362,57 @@
                     <p>Gain valuable insights into your security posture with our analytics dashboard that visualizes threats and patterns.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
             <h2>Contact Us</h2>
             <div class="contact-form">
-                <form>
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" id="name" placeholder="Your Name">
+                        <input type="text" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Your Email">
+                        <input type="email" id="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" placeholder="How can we help you?"></textarea>
+                        <textarea id="message" placeholder="How can we help you?" required></textarea>
                     </div>
                     <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer -->
-        <footer>
+    <!-- Deployment Help Section -->
+    <section class="container">
+        <div class="deployment-help">
+            <h3>Having issues with Vercel deployment?</h3>
+            <p>Follow these steps to fix the 404 error:</p>
+            <ol>
+                <li>Make sure your main HTML file is named <code>index.html</code></li>
+                <li>Create a <code>vercel.json</code> file with the following content:</li>
+            </ol>
+            <pre>{
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}</pre>
+            <p>Deploy again after making these changes.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
             <div class="footer-content">
-                <div class="logo">RK <span>Consolidated</span></div>
+                <div class="logo">🛡️ RK <span>Consolidated</span></div>
                 <p>AI Cybersecurity Solutions</p>
                 <div class="social-links">
                     <a href="#">LinkedIn</a>
@@ -412,20 +421,26 @@
                 </div>
                 <p>&copy; 2023 RK Consolidated. All rights reserved.</p>
             </div>
-        </footer>
-
-        <!-- Viewing Instructions -->
-        <div class="instructions">
-            <h3>How to View This Website</h3>
-            <p>Since you're viewing this in a browser already, you're all set! This is a fully functional preview of your website.</p>
-            <p>To view this again later:</p>
-            <ol>
-                <li>Save this HTML file to your computer</li>
-                <li>Double-click the file to open it in your browser</li>
-                <li>That's it! No internet required</li>
-            </ol>
-            <p>To make changes, open the file in a text editor like Notepad, TextEdit, or VS Code, modify the content, save, and refresh your browser.</p>
         </div>
-    </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! (This is a demo - no message was actually sent)');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
